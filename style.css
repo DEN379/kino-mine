@@ -1,0 +1,172 @@
+*{
+    font-size: 14px;
+}
+body{
+    overflow-x:hidden;
+}
+.container{
+    margin-top:40px;
+    margin-bottom: 40px;
+}
+.title{
+    background-color: #fafafa;
+    box-shadow: 1px 1px 3px;
+    border: 0.5px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0px;
+    padding:15px 0px 15px 15px;
+}
+
+img{
+    width: 40%;
+    margin: 15px 0px 15px 15px;
+    object-fit: contain;
+    top: 0px;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.text{
+    max-width: 50%;
+    align-self: flex-start;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+
+/* Overlay */
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+.window-overlay{
+    width: 900px;
+    height: 90vh;
+    margin: 50px auto;
+    padding: 40px auto;
+    display: flex;
+}
+.close-button{
+    position: absolute;
+    right: 10px;
+    width: 40px;
+    display: none;
+}
+.ovr-active{
+    display: block;
+}
+/* end Overlay */
+
+.navi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.search-form{
+    flex-basis: 60%;
+}
+
+@media screen and (max-width: 1440px){
+    .content .title img{
+        height: 300px;
+    }
+    .window-overlay1{
+        height: 550px;
+    }
+}
+@media screen and (max-width: 992px){
+    .window-overlay{
+        width: 66%;
+    }
+}
+@media screen and (max-width: 768px){
+    *{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 576px){
+    *{
+        font-size: 10.5px;
+    }
+    .window-overlay{
+        width: 90%;
+        
+    }
+    .window-overlay1{
+        /*width: 90%;*/
+        height: 50vh;
+    }
+    .navi{
+        flex-direction: column;
+        align-content: space-between;
+    }
+    .search-form{
+        flex-basis: 90%;
+    }
+}
+@media screen and (max-width: 426px){
+    h2{
+        font-size: 1.8rem;
+    }
+    .text {
+        max-width: 42%;
+    }
+}
+@media screen and (max-width: 321px){
+    h2{
+        font-size: 1.5rem;
+    }
+    .close-button{
+        right: 5px;
+        top: -5px;
+        width: 30px;
+    }
+    .window-overlay1{
+        height: 62vh;
+    }
+    .title{
+        width: 96%;
+    }
+}
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
